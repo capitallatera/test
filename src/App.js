@@ -12,7 +12,7 @@ import {
 function App() {
   const { Header, Sider, Content } = Layout;
   const [collapsed, setCollapsed] = useState(false)
-  const   toggle = () => {setCollapsed(!collapsed)};
+  const toggle = () => { setCollapsed(!collapsed) };
 
   return (
     <Layout>
