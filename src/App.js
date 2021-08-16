@@ -7,7 +7,7 @@ import {
   VideoCameraOutlined,
   UploadOutlined,
 } from '@ant-design/icons';
-
+import Cards from './Cards';
 
 function App() {
   const { Header, Sider, Content } = Layout;
@@ -46,7 +46,7 @@ function App() {
             minHeight: '100vh',
           }}
         >
-          Content
+          <Cards/>
         </Content>
       </Layout>
     </Layout>
