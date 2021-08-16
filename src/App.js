@@ -12,7 +12,7 @@ import {
 function App() {
   const { Header, Sider, Content } = Layout;
   const [collapsed, setCollapsed] = useState(false)
-  const   toggle = () => {setCollapsed(!collapsed)};
+  const toggle = () => { setCollapsed(!collapsed) };
 
   return (
     <Layout>
@@ -31,11 +31,12 @@ function App() {
         </Menu>
       </Sider>
       <Layout className="site-layout">
-        <Header className="site-layout-background" style={{ padding: 0 }}>
-          {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-            className: 'trigger',
-            onClick: toggle,
-          })}
+        <Header className="site-layout-background" style={{ background: '#fff' }}>
+          {
+            collapsed ?
+              <MenuUnfoldOutlined style={{ fontSize: '22px' }} onClick={toggle} /> :
+              <MenuFoldOutlined style={{ fontSize: '22px' }} onClick={toggle} />
+          }
         </Header>
         <Content
           className="site-layout-background"
